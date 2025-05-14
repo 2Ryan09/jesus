@@ -1,96 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Hi, Jesus :)</title>
+  <meta name="description" content="Hi, Jesus :)">
+  <style>
+    body {
+      background: linear-gradient(135deg, #fbeffb 0%, #b2f7ef 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    }
+
+    /* Cute rainbow text effect */
+    .cute-wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      flex-direction: column;
+      z-index: 1;
+    }
+    .cute-text {
+      font-size: 64px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ffb6d5, #ffd6e0, #b2f7ef, #ffb6d5);
+      background-size: 200% 200%;
+      color: #fff;
+      padding: 20px 40px;
+      border-radius: 32px;
+      box-shadow: 0 4px 24px 0 #ffb6d555;
+      animation: rainbowBG 2s linear infinite;
+      position: relative;
+      transition: transform 0.1s;
+      user-select: none;
+      text-shadow: 0 2px 8px #ffb6d5, 0 0px 0px #fff;
+    }
+    .cute-text:hover {
+      animation: rainbowBG 2s linear infinite, shakeCute 0.3s infinite;
+      transform: scale(1.08) rotate(-2deg);
+      box-shadow: 0 8px 32px 0 #ffd6e055;
+    }
+
+    @keyframes rainbowBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes shakeCute {
+      0% { transform: scale(1.08) rotate(-2deg) translateX(0);}
+      25% { transform: scale(1.08) rotate(-2deg) translateX(-4px);}
+      50% { transform: scale(1.08) rotate(-2deg) translateX(4px);}
+      75% { transform: scale(1.08) rotate(-2deg) translateX(-4px);}
+      100% { transform: scale(1.08) rotate(-2deg) translateX(0);}
+    }
+
+    /* Sparkle effect */
+    .sparkle {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0.8;
+      animation: sparkleAnim 1.2s linear forwards;
+    }
+    .sparkle::before, .sparkle::after {
+      content: '';
+      position: absolute;
+      background: #fff6b8;
+      border-radius: 50%;
+      opacity: 0.8;
+    }
+    .sparkle::before {
+      width: 18px; height: 4px; left: 0; top: 7px;
+      box-shadow: 0 0 8px #fff6b8;
+    }
+    .sparkle::after {
+      width: 4px; height: 18px; left: 7px; top: 0;
+      box-shadow: 0 0 8px #fff6b8;
+    }
+    @keyframes sparkleAnim {
+      0% { opacity: 0; transform: scale(0.1);}
+      50% { opacity: 1; transform: scale(1.2);}
+      100% { opacity: 0; transform: scale(0.1);}
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating hearts -->
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <!-- Cute text -->
+  <div class="cute-wrapper">
+    <div class="cute-text">Hi, Jesus :)</div>
+  </div>
+  <script>
+    // Sparkle burst on click
+    document.querySelector('.cute-text').addEventListener('click', function(e) {
+      for (let i = 0; i < 15; i++) {
+        let sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        // Random position around the click or center
+        let angle = Math.random() * 2 * Math.PI;
+        let radius = 60 + Math.random() * 40;
+        let x = window.innerWidth/2 + Math.cos(angle) * radius - 9;
+        let y = window.innerHeight/2 + Math.sin(angle) * radius - 9;
+        sparkle.style.left = x + 'px';
+        sparkle.style.top = y + 'px';
+        document.body.appendChild(sparkle);
+        setTimeout(() => sparkle.remove(), 1200);
+      }
+    });
+  </script>
+</body>
 </html>
